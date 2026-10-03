@@ -3,6 +3,8 @@
 This project demonstrates a very simple Azure naming module, built entirely in Terraform. The
 intention of this module is to provide a configurable, but minimal naming structure for Azure Resources. It won't cover extremely complex or very specific naming requirements, and there are other solutions which can be used in those scenarios, some of which are listed below.
 
+Abbreviations for resource types are based on the [Azure CAF Best Practice](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations).
+
 ## Requirements
 * Terraform version >= 1.15.0 (Output Type Constraints were introduced here.)
 
