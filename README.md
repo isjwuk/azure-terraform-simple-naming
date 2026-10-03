@@ -3,6 +3,14 @@
 This project demonstrates a very simple Azure naming module, built entirely in Terraform. The
 intention of this module is to provide a configurable, but minimal naming structure for Azure Resources. It won't cover extremely complex or very specific naming requirements, and there are other solutions which can be used in those scenarios, some of which are listed below.
 
+Names are generated like this:
+```
+module.naming.resource_name["storage_account"]
+
+module.naming.resource_name["sql_server"]
+```
+
+
 Abbreviations for resource types are based on the [Azure CAF Best Practice](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations).
 
 ## Requirements
@@ -44,12 +52,15 @@ module "avm-res-compute-virtualmachine" {
   zone                = 1
 }
 ```
-
-## Alternative Naming Conventions
-To adjust the naming convention, rearrange the components in ``.\naming\outputs.md``. More components can be added by including additional variables and following the pattern.
+## Customising
+### Alternative Naming Conventions
+To adjust the naming convention, rearrange the components in ``outputs.tf``. More components can be added to the names by including additional variables and following the pattern.
+### Resource Types 
+To add additional resource types, or modify the shortcodes used, edit the ``short_resource_type`` map in ``mapping.tf``
+### Regions
+To add additional regions, or modify the shortcodes used, edit the ``short_location`` map in ``mapping.tf``
 
 ## Future Development
-* ``TODO`` markers have been used in the code to pick out some obvious future improvements.
 * Child Resources (Subnets, NICs, disks etc)
 
 ## Alternatives
