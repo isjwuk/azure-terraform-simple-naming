@@ -21,3 +21,7 @@ output "virtual_machine_name" {
 output "storage_account_name" {
   value = module.naming.resource_name["storage_account"]
 }
+
+output "sql_server_name" {
+  value = module.naming.resource_name["sql_server"]
+}

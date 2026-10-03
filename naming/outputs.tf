@@ -3,7 +3,7 @@
 locals {
   #Generate the default names for each resource type, based on the provided application shortcode, environment and location. 
   default_names = {
-    for rt in local.resource_type :
+    for rt in keys(local.short_resource_type) :
     rt => "${local.short_resource_type[rt]}-${var.application_shortcode}-${local.short_environment[var.environment]}-${local.short_location[var.location]}"
   }
 

@@ -50,48 +50,8 @@ locals {
     log_analytics          = "log"
     # CAF recommended abbreviations (partial list). Add more as needed.
     # https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations
-    # Also add long name to resource_type list below.
   }
 }
-
-locals {
-  resource_type = [
-    "resource_group",
-    "storage_account",
-    "virtual_network",
-    "subnet",
-    "network_interface",
-    "network_security_group",
-    "public_ip",
-    "route_table",
-    "application_gateway",
-    "load_balancer",
-    "virtual_machine",
-    "vm_scale_set",
-    "availability_set",
-    "disk",
-    "osdisk",
-    "managed_identity",
-    "key_vault",
-    "storage_share",
-    "container_registry",
-    "aks",
-    "app_service_plan",
-    "web_app",
-    "function_app",
-    "sql_server",
-    "sql_database",
-    "cosmos_db",
-    "redis_cache",
-    "api_management",
-    "event_hub",
-    "service_bus",
-    "vpn_gateway",
-    "application_insights",
-    "log_analytics",
-  ]
-}
-
 
 ################ Map Location Name to Short Form  
 locals {
